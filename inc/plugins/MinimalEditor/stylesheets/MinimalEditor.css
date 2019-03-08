@@ -1,0 +1,2 @@
+.minimaleditor label { display: inline-block; margin: 0 8px; cursor: pointer; padding: 4px 8px; background: rgba(0,0,0,0.05); border-radius: 6px 6px 0 0; }
+.message-preview { display: none; padding: 8px; width: 500px; background: #FFF; border: solid 1px #CCC; border-radius: 6px; color: #333; }
