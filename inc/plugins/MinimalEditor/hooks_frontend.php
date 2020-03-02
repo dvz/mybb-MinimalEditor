@@ -78,54 +78,78 @@ function xmlhttp(): void
 
 function calendar_addevent_end(): void
 {
-    global $codebuttons;
+    global $codebuttons, $calendar;
 
     if (!isset($codebuttons)) {
-        $codebuttons .= \MinimalEditor\getEditorHtml();
+        $codebuttons .= \MinimalEditor\getEditorHtml([
+            'mycode' => $calendar['allowmycode'],
+            'smilies' => $calendar['allowsmilies'],
+            'imgcode' => $calendar['allowimgcode'],
+        ]);
     }
 }
 
 function calendar_editevent_end(): void
 {
-    global $codebuttons;
+    global $codebuttons, $calendar;
 
     if (!isset($codebuttons)) {
-        $codebuttons .= \MinimalEditor\getEditorHtml();
+        $codebuttons .= \MinimalEditor\getEditorHtml([
+            'mycode' => $calendar['allowmycode'],
+            'smilies' => $calendar['allowsmilies'],
+            'imgcode' => $calendar['allowimgcode'],
+        ]);
     }
 }
 
 function editpost_end(): void
 {
-    global $codebuttons;
+    global $codebuttons, $forum;
 
     if (!isset($codebuttons)) {
-        $codebuttons .= \MinimalEditor\getEditorHtml();
+        $codebuttons .= \MinimalEditor\getEditorHtml([
+            'mycode' => $forum['allowmycode'],
+            'smilies' => $forum['allowsmilies'],
+            'imgcode' => $forum['allowimgcode'],
+        ]);
     }
 }
 
 function newreply_end(): void
 {
-    global $codebuttons;
+    global $codebuttons, $forum;
 
     if (!isset($codebuttons)) {
-        $codebuttons .= \MinimalEditor\getEditorHtml();
+        $codebuttons .= \MinimalEditor\getEditorHtml([
+            'mycode' => $forum['allowmycode'],
+            'smilies' => $forum['allowsmilies'],
+            'imgcode' => $forum['allowimgcode'],
+        ]);
     }
 }
 
 function newthread_end(): void
 {
-    global $codebuttons;
+    global $codebuttons, $forum;
 
     if (!isset($codebuttons)) {
-        $codebuttons .= \MinimalEditor\getEditorHtml();
+        $codebuttons .= \MinimalEditor\getEditorHtml([
+            'mycode' => $forum['allowmycode'],
+            'smilies' => $forum['allowsmilies'],
+            'imgcode' => $forum['allowimgcode'],
+        ]);
     }
 }
 
 function private_send_end(): void
 {
-    global $codebuttons;
+    global $codebuttons, $mybb;
 
     if (isset($codebuttons)) {
-        $codebuttons .= \MinimalEditor\getEditorHtml();
+        $codebuttons .= \MinimalEditor\getEditorHtml([
+            'mycode' => $mybb->settings['pmsallowmycode'],
+            'smilies' => $mybb->settings['pmsallowsmilies'],
+            'imgcode' => $mybb->settings['pmsallowimgcode'],
+        ]);
     }
 }
