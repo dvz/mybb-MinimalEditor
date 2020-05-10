@@ -145,7 +145,7 @@ function private_send_end(): void
 {
     global $codebuttons, $mybb;
 
-    if (isset($codebuttons)) {
+    if (empty($codebuttons)) {
         $codebuttons .= \MinimalEditor\getEditorHtml([
             'mycode' => $mybb->settings['pmsallowmycode'],
             'smilies' => $mybb->settings['pmsallowsmilies'],
