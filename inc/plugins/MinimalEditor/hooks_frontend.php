@@ -80,7 +80,7 @@ function calendar_addevent_end(): void
 {
     global $codebuttons, $calendar;
 
-    if (!isset($codebuttons)) {
+    if (empty($codebuttons)) {
         $codebuttons .= \MinimalEditor\getEditorHtml([
             'mycode' => $calendar['allowmycode'],
             'smilies' => $calendar['allowsmilies'],
@@ -93,7 +93,7 @@ function calendar_editevent_end(): void
 {
     global $codebuttons, $calendar;
 
-    if (!isset($codebuttons)) {
+    if (empty($codebuttons)) {
         $codebuttons .= \MinimalEditor\getEditorHtml([
             'mycode' => $calendar['allowmycode'],
             'smilies' => $calendar['allowsmilies'],
@@ -106,7 +106,7 @@ function editpost_end(): void
 {
     global $codebuttons, $forum;
 
-    if (!isset($codebuttons)) {
+    if (empty($codebuttons)) {
         $codebuttons .= \MinimalEditor\getEditorHtml([
             'mycode' => $forum['allowmycode'],
             'smilies' => $forum['allowsmilies'],
@@ -119,7 +119,7 @@ function newreply_end(): void
 {
     global $codebuttons, $forum;
 
-    if (!isset($codebuttons)) {
+    if (empty($codebuttons)) {
         $codebuttons .= \MinimalEditor\getEditorHtml([
             'mycode' => $forum['allowmycode'],
             'smilies' => $forum['allowsmilies'],
@@ -132,7 +132,7 @@ function newthread_end(): void
 {
     global $codebuttons, $forum;
 
-    if (!isset($codebuttons)) {
+    if (empty($codebuttons)) {
         $codebuttons .= \MinimalEditor\getEditorHtml([
             'mycode' => $forum['allowmycode'],
             'smilies' => $forum['allowsmilies'],
