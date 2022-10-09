@@ -25,7 +25,7 @@ function MinimalEditor_info()
         'website'       => '',
         'author'        => 'Tomasz \'Devilshakerz\' Mlynski',
         'authorsite'    => 'https://devilshakerz.com/',
-        'version'       => '0.1.2',
+        'version'       => '0.1.3',
         'codename'      => 'minimal_editor',
         'compatibility' => '18*',
     ];
